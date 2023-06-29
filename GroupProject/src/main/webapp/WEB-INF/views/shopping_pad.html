@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <link rel="stylesheet">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+window.onload = function(){
+	
+	document.body.scrollTop = document.body.scrollHeight;
+	
+};
+
+
+
+	function Web(url){
+		window.location.href = url;
+	}
+	function feedbutton(){
+		window.location.href = "shopping_feed.html";
+	}
+	function leashbutton(){
+		window.location.href = "shopping_leash.html";
+	}
+	function padbutton(){
+		window.location.href = "shopping_pad.html";
+	}
+	function clothbutton(){
+		window.location.href = "shopping_cloth.html";
+	}
+</script>
+<style>
+
+body{width:100%;
+	height:100vh;
+	}
+nav {
+	background-color: lightblue;
+	color: #fff;
+	padding: 10px;
+	text-align: right;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+iframe {
+	margin-left: auto;
+	margin-bottom: auto;
+}
+
+.menu li img {
+	/* 로고 이미지의 스타일링을 추가 */
+	float: left;
+}
+
+.menu {
+	list-style: none;
+}
+
+.menu li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.menu li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.search {
+	/* 검색 기능에 대한 스타일링을 추가 */
+	
+}
+
+/* 배너 스타일링 */
+.banner {
+	/* 배너 이미지와 내용에 대한 스타일링을 추가 */
+	
+}
+
+/* 소개 섹션 스타일링 */
+.introduction {
+	padding: 20px;
+}
+
+.introduction h2 {
+	font-size: 24px;
+	color: #333;
+}
+
+.introduction p {
+	color: #666;
+}
+
+/* 인기 게시물 스타일링 */
+.popular-posts {
+	padding: 20px;
+}
+
+.popular-posts h3 {
+	font-size: 20px;
+	color: #333;
+}
+
+.popular-posts ul {
+	list-style: none;
+	padding: 0;
+}
+
+.popular-posts li {
+	margin-bottom: 10px;
+}
+
+.popular-posts h4 {
+	font-size: 16px;
+	color: #333;
+}
+
+/* 최신 소식 스타일링 */
+.latest-news {
+	padding: 20px;
+}
+
+.latest-news h3 {
+	font-size: 20px;
+	color: #333;
+}
+
+.latest-news ul {
+	list-style: none;
+	padding: 0;
+}
+
+.latest-news li {
+	margin-bottom: 10px;
+}
+
+.latest-news h4 {
+	font-size: 16px;
+	color: #333;
+}
+
+/* 반려동물 사진 갤러리 스타일링 */
+.pet-gallery {
+	padding: 20px;
+}
+
+.pet-gallery h3 {
+	font-size: 20px;
+	color: #333;
+}
+
+/* 이용 안내 및 연락처 스타일링 */
+.contact {
+	padding: 20px;
+}
+
+.contact h3 {
+	font-size: 20px;
+	color: #333;
+}
+
+/* 샵 부분 css */
+
+
+html, body {
+	overflow-x: hidden; /* 박스 범위밖으로 나가면 text가 hidden으로 바뀌는 코드 */
+	width: 100vw;
+}
+
+section {
+	display: block;
+	padding: 40px 0;
+	width: 100%;
+}
+
+
+#shop {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.sectionHead {
+	font-size: 20px;
+	padding: 25px 0;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	word-spacing: 1.5px;
+}
+
+.sectionSubHead {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	word-spacing: 1.5px;
+	margin-bottom: 5px;
+	margin-top: 32px;
+}
+
+.item-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	box-shadow: 9px 6px 13px rgba(0, 0, 0, 0.32);
+	transition: all 0.2s;
+}
+
+.item-box:hover {
+	transform: scale(1.2);
+}
+
+.item-box .item-box-img {
+	width: 100%;
+	height: 100%;
+	z-index: 15;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+}
+
+.item-box .item-box-img>img {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: -1;
+}
+
+.item-box-head {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 14px;
+	margin-left: 21px;
+	padding-left: 0;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.item-box .item-box-sub-text {
+	position: absolute;
+	left: 0;
+	top: 4px;
+	line-height: 1;
+	margin: 52px 8px;
+	margin-left: 21px;
+	width: 80%;
+	font-style: italic;
+	font-size: 13px;
+	color: #e6e6e6;
+}
+
+.item-box .item-box-btn {
+	position: absolute;
+	left: 0;
+	top: 8px;
+	margin: 105px 8px;
+	margin-left: 22px;
+	font-size: 14px;
+	padding: 5px 18px;
+	color: #fff;
+	background-color: #e47618;
+	border: 0;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+
+.item-box .item-box-btn:hover {
+	background-color: #0e80cc;
+}
+
+.card-img-top {
+	max-height: 190px;
+}
+
+.card {
+	margin: 15px 0;
+	cursor: pointer;
+	box-shadow: 9px 9px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
+}
+
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: 35px;
+	margin-left: 35px
+}
+
+.column1 {
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 25%
+}
+
+.column2 {
+	-ms-flex: 0 0 33.333333%;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%
+}
+</style>
+
+</head>
+<body>
+<!-- 상단 네비게이션 바 -->
+    <nav>
+      <div class="logo">
+        <!-- 로고 이미지 삽입 -->
+        <img src="logo.png" alt="Logo">
+      </div>
+      <ul class="menu">
+        <li><a href="board.html">게시판</a></li>
+        <li><a href="shopping.html">쇼핑몰</a></li>
+        <li><a href="join.html">회원 가입</a></li>
+        <li><a href="login.html">로그인</a></li>
+      </ul>
+    </nav>
+ 
+ 
+ 
+      <section id="shop">
+            <div class="container">
+                <div class="sectionHead">Shop</div>
+                <hr>
+                <br>
+                <div class="row">
+                    <div class="column1">
+                        <div class="item-box">
+                            <div class="item-box-img">
+                                <img src="feed.jpg">
+                            </div>
+                           
+                            <div class="item-box-head">건사료</div>
+                            <div class="item-box-sub-text">내 반려동물의 최고의 식사</div>
+                            <button class="btn item-box-btn" onclick="feedbutton()">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="column1">
+                        <div class="item-box">
+                            <div class="item-box-img">
+                                <img src="leash.jpg">
+                            </div>
+                            <div class="item-box-head">가슴줄&목줄</div>
+                            <div class="item-box-sub-text">반려동물과 산책시 필수 아이템</div>
+                            <button class="btn item-box-btn" onclick="leashbutton()">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="column1">
+                        <div class="item-box">
+                            <div class="item-box-img">
+                                <img src="pad.png">
+                            </div>
+                            <div class="item-box-head">배변패드</div>
+                            <div class="item-box-sub-text">실내배변을 도와줄 배변패드</div>
+                            <button class="btn item-box-btn" onclick="padbutton()">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="column1">
+                        <div class="item-box">
+                            <div class="item-box-img">
+                                <img src="cloth1.jpg">
+                            </div>
+                            <div class="item-box-head">반려동물 옷</div>
+                            <div class="item-box-sub-text">나의 반려동물에게 옷을 선물하세요</div>
+                            <button class="btn item-box-btn" onclick="clothbutton()">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+				
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+
+                <div class="sectionSubHead">배변패드</div>
+                <div class="row">
+                    <div class="column2">
+                        <div class="card" onclick="">
+                            <img class="card-img-top" src="pad1.jpg">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    10,000원
+                                    <span style="color:rgb(173, 11, 11)">(39% off)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="card">
+                            <img class="card-img-top" src="pad2.jpg">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    10,000원
+                                    <span style="color:rgb(173, 11, 11)">(27% off)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="card">
+                            <img class="card-img-top" src="pad3.jpg">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    10,000원
+                                    <span style="color:rgb(173, 11, 11)">(32% off)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="column2">
+                        <div class="card">
+                            <img class="card-img-top" src="pad4.jpg">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    10,000원
+                                    <span style="color:rgb(173, 11, 11)">(45% off)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="card">
+                            <img class="card-img-top" src="pad5.jpg">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    10,000원
+                                    <span style="color:rgb(173, 11, 11)">(17% off)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="card">
+                            <img class="card-img-top" src="pad6.jpg">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    10,000원
+                                    <span style="color:rgb(173, 11, 11)">(21% off)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+</body>
+</html>
