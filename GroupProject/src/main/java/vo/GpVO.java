@@ -1,32 +1,24 @@
 package vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class GpVO {
-	private int id;
+	private int pid;
 	private String productname, species, category, price, productdetail,
-	filename, date, popularity;
-	public int getIdx() {
-		return idx;
+	filename, regdate, popularity;
+	//업로드 된 파일을 받기위한 클래스
+	MultipartFile photo;
+	public int getPid() {
+		return pid;
 	}
-	public String getProductdetail() {
-		return productdetail;
+	public void setPid(int pid) {
+		this.pid = pid;
 	}
-	public int getProductidx() {
-		return productidx;
+	public String getProductname() {
+		return productname;
 	}
-	public void setProductidx(int productidx) {
-		this.productidx = productidx;
-	}
-	public void setProductdetail(String productdetail) {
-		this.productdetail = productdetail;
-	}
-	public void setIdx(int idx) {
-		this.idx = idx;
-	}
-	public String getProduct() {
-		return product;
-	}
-	public void setProduct(String product) {
-		this.product = product;
+	public void setProductname(String productname) {
+		this.productname = productname;
 	}
 	public String getSpecies() {
 		return species;
@@ -46,11 +38,11 @@ public class GpVO {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public String getContents() {
-		return contents;
+	public String getProductdetail() {
+		return productdetail;
 	}
-	public void setContents(String contents) {
-		this.contents = contents;
+	public void setProductdetail(String productdetail) {
+		this.productdetail = productdetail;
 	}
 	public String getFilename() {
 		return filename;
@@ -58,6 +50,25 @@ public class GpVO {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
+	public String getRegdate() {
+		return regdate;
+	}
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
+	public String getPopularity() {
+		return popularity;
+	}
+	public void setPopularity(String popularity) {
+		this.popularity = popularity;
+	}
+	public MultipartFile getPhoto() {
+		return photo;
+	}
+	public void setPhoto(MultipartFile photo) {
+		this.photo = photo;
+	}
+	
 	
 
 }
