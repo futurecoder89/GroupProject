@@ -50,6 +50,10 @@
 		f.method = "post";
 		f.submit();
 	}
+	/* function search(){
+		String search = document.getElementById.value(a);
+		
+	} */
 	
 	
 	
@@ -78,8 +82,8 @@
         <li><a href="login.html">로그인</a></li>
       </ul>
       <form align="center";>
-  		<input type="text" value="search your item">
-  		<input type="submit" value="search">
+  		<input type="text" placeholder="search your item" id="a">
+  		<input type="submit" value="search" onclick="search()">
   	</form>
     </nav>
  
@@ -161,7 +165,7 @@
 			
 				<div class="row">
 				<c:forEach var="vo" items="${ list }">
-					<div class="column2" onclick="web('https://www.naver.com')">
+					<div class="column2" onclick="web('http://www.coupang.com')">
 						<div class="card">
 							<c:if test="${ vo.filename ne 'no_file' }">
 								<img class="card-img-top" src="resources/upload/${vo.filename}">

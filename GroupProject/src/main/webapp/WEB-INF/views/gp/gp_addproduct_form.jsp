@@ -74,15 +74,15 @@ input[type="checkbox"] {
 		
 		if( name == ''){
 			alert('상품명을 입력하세요');
-			return
+			return;
 		}
 		if( detail == ''){
 				alert('상품설명을 입력하세요');
-				return
+				return;
 			}
 		if( price == ''){
 				alert('가격을 입력하세요');
-				return
+				return;
 			}
 		f.action = "addproduct.do";
 		f.submit();
@@ -151,14 +151,14 @@ input[type="checkbox"] {
                 <input type="file" id="filename" name="photo">
             </div>
             
-            <div class="type_regdate" name="regdate">${vo.regdate }</div>
+            <div class="type_regdate" name="regdate">${vo.regdate }</div>   <!-- 인풋이 아니고 regdate는 name으로는 의미가없음 -->
             
              <div class="form-group">
             	<label type="hidden" for="popularity"></label>
             	<input type="hidden" name="popularity" value="${vo.popularity }">
             </div>
             
-			<div colspan="2" align="right">
+			<div align="right"> <!-- div는 colspan안됨. 테이블만 됨 -->
 				
             	<input type="button" value="상품 등록" onclick="send(this.form);">
             	<input type="button" value="목록으로" onclick="location.href='list.do'">  <!-- 관리자페이지 메인 링크를 넣어야함 -->
